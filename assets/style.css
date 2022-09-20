@@ -1,0 +1,37 @@
+:root {
+    --headerColor: #CCD5AE;
+    --textColor: #000;
+    --accentColor: #D4A373;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: var(--headerColor);
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+#header-navbar li{
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}    
+
+#about-me aside {
+    width: 5%;
+    padding-right: 10px;
+    margin-left: 10px;
+    float: left;
+    border-right: 3px solid black;
+}
+#about-me p {
+    padding-left: 10px;
+}
