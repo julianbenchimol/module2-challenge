@@ -1,7 +1,9 @@
 :root {
     --headerColor: #CCD5AE;
-    --textColor: #000;
-    --accentColor: #D4A373;
+    --colorTwo: #E9EDC9;
+    --colorThree: #FEFAE0;
+    --colorFour: #FAEDCD;
+    --colorFive: #D4A373;
 }
 
 *{
@@ -16,22 +18,72 @@ header{
     padding-top: 25px;
     padding-left: 10px;
 }
+/*navbar styling*/
+.navbar {
+    /*navbar flexbox*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    
+    margin-right: 15px;
+    position: relative;
+    top: 25px;
+}
+.navbar a {
+    text-decoration: none;
+}
+/*========================*/
 
-#header-navbar li{
-    display: inline;
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex: 0 1 auto;
 }
 
-a {
-    text-decoration: none;
-}    
-
+/*about me style*/
 #about-me aside {
     width: 5%;
-    padding-right: 10px;
-    margin-left: 10px;
+    margin: 10px 20px 20px 10px;
+    padding-right: 20px;
     float: left;
-    border-right: 3px solid black;
 }
+
 #about-me p {
     padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
+/*========================*/
+
+/*my work styling*/
+#my-work aside {
+    width: 5%;
+    margin: 10px 20px 20px 10px;
+    padding-right: 20px;
+    float: left;
+}
+
+#my-work p {
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+/*========================*/
+/*Contact Me Stlying*/
+#contact-me aside {
+    width: 5%;
+    font-size: 95%;
+    margin: 10px 20px 20px 10px;
+    padding-right: 20px;
+    float: left;
+}
+
+#contact-me p {
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+/*========================*/
