@@ -18,20 +18,20 @@ header{
     padding-top: 25px;
     padding-left: 10px;
 }
+header h1 {
+    position: relative;
+    top: 40px;
+}
 /*navbar styling*/
 .navbar {
-    /*navbar flexbox*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: right;
-    
-    margin-right: 15px;
+
+    font-size: 24px;
     position: relative;
-    top: 25px;
-}
-.navbar a {
-    text-decoration: none;
+    top: 10px;
+    float: right;
+    margin-right: 20px;
+
+    background-color: var(--colorThree);
 }
 /*========================*/
 
