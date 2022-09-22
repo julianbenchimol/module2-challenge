@@ -1,9 +1,12 @@
 :root {
-    --headerColor: #CCD5AE;
-    --colorTwo: #E9EDC9;
-    --navbarColor: #FEFAE0;
-    --colorFour: #FAEDCD;
-    --highlightColor: #D4A373;
+    --headerColor: #192340;
+    --navbarColor: #7775BF;
+    --highlightColor: #3D4573;
+    --backgroundColor: #cbccd1;
+    --textColor: #fff;
+
+    --picWidth: 400px;
+    --picHeight: 250px;
 }
 
 *{
@@ -11,52 +14,68 @@
     padding: 0;
 }
 
+body {
+    background-color: var(--backgroundColor);
+}
+
 #main-header{
+    /*modifies flexbox*/
     display: flex; 
     flex-direction: column;
     flex-wrap: wrap;
-
+    flex: 1;
+    /*modifies width/height*/
     height: 100px;
-    width: auto;
-    
+    width: 100%;
+    /*modifies main header elements*/
     background-color: var(--headerColor);
-    padding-top: 15px;
+    padding-top: 5px;
     padding-left: 10px;
     padding-bottom: 5px;
 }
-
+/*modifies h1 in header */
 #main-header > h1 {
+    padding-left:5px;
     font-size: 48px;
     width: 90%;
+    color: var(--textColor);
 }
 
-#main-header > #avatar-pic {
-    
-}
 /*navbar styling*/
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
     height:28px;
     font-size: 24px;
     background-color: var(--navbarColor);
+    background-origin: content-box;
 }
 .navbar a {
+    padding: 5px; ;
+    color: var(--textColor);
     text-decoration: none;
 }
-.navbar a:hover, .navbar a:active, .navbar a:focus-visible{ 
+
+.navbar a:hover{
     background-color: var(--highlightColor);
-    color: #000;
+    padding-bottom: 2px;
+}
+.navbar a:active{
+    font-size: 95%;
 }
 
+a.navbar:focus{
+    background-color: var(--highlightColor);
+}
 #avatar-pic{
     width: 100px;
     height: 100px;
 }
-/*========================*/
 
 .card {
     display: flex;
     flex-flow: row wrap;
-    flex: 0 1 200px;
 }
 h2{
     font-size: 26px;
@@ -69,21 +88,29 @@ h2{
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
-/*Tablet screen size*/
-@media screen and (max-width: 992px){
-
-
+.picture-holder {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    position: relative;
 }
 
-/*Large phone screen size*/
+#study-guide, #contact-form, #code-snippet {
+    margin: 5px;
+    width: 30%;
+}
+
+.overlay:hover {
+    outline: 3px solid var(--highlightColor);
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px){
-    .card{
-        flex-direction: column;
+    .picture-holder{
+        flex-direction: row;
     }
-
-}
-/*small phones screen size */
-@media screen and (max-width: 576){
-
+    #study-guide, #contact-form, #code-snippet {
+        margin: 5px;
+        width: 45%;
+    }
 }
