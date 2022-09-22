@@ -1,9 +1,9 @@
 :root {
     --headerColor: #CCD5AE;
     --colorTwo: #E9EDC9;
-    --colorThree: #FEFAE0;
+    --navbarColor: #FEFAE0;
     --colorFour: #FAEDCD;
-    --colorFive: #D4A373;
+    --highlightColor: #D4A373;
 }
 
 *{
@@ -11,83 +11,79 @@
     padding: 0;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 80px;
-    width: 100%;
+#main-header{
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 100px;
+    width: auto;
+    
     background-color: var(--headerColor);
-    padding-top: 25px;
+    padding-top: 15px;
     padding-left: 10px;
+    padding-bottom: 5px;
 }
 
+#main-header > h1 {
+    font-size: 48px;
+    width: 90%;
+}
+
+#main-header > #avatar-pic {
+    
+}
 /*navbar styling*/
 .navbar {
     height:28px;
     font-size: 24px;
-    padding: 1px 5px;
-    background-color: var(--colorThree);
+    background-color: var(--navbarColor);
+}
+.navbar a {
+    text-decoration: none;
+}
+.navbar a:hover, .navbar a:active, .navbar a:focus-visible{ 
+    background-color: var(--highlightColor);
+    color: #000;
+}
+
+#avatar-pic{
+    width: 100px;
+    height: 100px;
 }
 /*========================*/
-
-.content{
-    display: flex;
-    flex-direction: column;
-}
 
 .card {
     display: flex;
+    flex-flow: row wrap;
+    flex: 0 1 200px;
+}
+h2{
+    font-size: 26px;
+    text-align: left;
 }
 
-/*about me style*/
-#about-me aside {
-    width: 5%;
-    margin: 10px 25px 20px 10px;
-    padding-right: 20px;
-    float: left;
-}
-
-#about-me p {
+/*styles the card text*/
+#card-text {
     padding-left: 10px;
     margin-top: 10px;
-    margin-bottom: 50px;
-}
-/*========================*/
-
-/*my work styling*/
-#my-work aside {
-    width: 5%;
-    margin: 10px 25px 20px 10px;
-    padding-right: 20px;
-    float: left;
+    margin-bottom: 20px;
 }
 
-#my-work p {
-    padding-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-/*========================*/
-/*Contact Me Stlying*/
-#contact-me aside {
-    width: 5%;
-    font-size: 95%;
-    margin: 10px 25px 20px 10px;
-    padding-right: 20px;
-    float: left;
+/*Tablet screen size*/
+@media screen and (max-width: 992px){
+
+
 }
 
-#contact-me p {
-    padding-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 50px;
+/*Large phone screen size*/
+@media screen and (max-width: 768px){
+    .card{
+        flex-direction: column;
+    }
+
 }
-/*========================*/
-
-/* ? Make the 'asides' 100% width when less than certain pixels wide */
-
-@media only screen and (max-width: 500px){
-
+/*small phones screen size */
+@media screen and (max-width: 576){
 
 }
