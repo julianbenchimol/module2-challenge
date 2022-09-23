@@ -37,7 +37,6 @@ body {
 #main-header > h1 {
     padding-left:5px;
     font-size: 48px;
-    width: 90%;
     color: var(--textColor);
 }
 
@@ -46,6 +45,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-left: 5px;
+    width: auto;
     height:28px;
     font-size: 24px;
     background-color: var(--navbarColor);
@@ -103,6 +103,27 @@ h2{
 .overlay:hover {
     outline: 3px solid var(--highlightColor);
     cursor: pointer;
+}
+
+.picture-caption{
+    position: absolute;
+}
+
+#study-guide-caption{
+    color: var(--textColor);
+    left: 90px;
+    top: 210px;
+}
+
+#contact-form-caption{
+    color: var(--textColor);
+    top: 210px;
+}
+
+#code-snippet-caption{
+    color: var(--textColor);
+    right: 60px;
+    top: 210px;
 }
 
 @media screen and (max-width: 768px){
