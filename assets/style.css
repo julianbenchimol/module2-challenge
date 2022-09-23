@@ -76,6 +76,7 @@ a.navbar:focus{
 .card {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
 h2{
     font-size: 26px;
@@ -91,39 +92,28 @@ h2{
 .picture-holder {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-    position: relative;
+    justify-content: space-around;
 }
-
+.picture-holder #pic-caption {
+    width: 500px;
+    display: flex;
+    flex-flow: column wrap;
+}
 #study-guide, #contact-form, #code-snippet {
     margin: 5px;
-    width: 30%;
+    width: 100%;
+}
+
+#pic-caption figcaption{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
 }
 
 .overlay:hover {
     outline: 3px solid var(--highlightColor);
     cursor: pointer;
-}
-
-.picture-caption{
-    position: absolute;
-}
-
-#study-guide-caption{
-    color: var(--textColor);
-    left: 90px;
-    top: 210px;
-}
-
-#contact-form-caption{
-    color: var(--textColor);
-    top: 210px;
-}
-
-#code-snippet-caption{
-    color: var(--textColor);
-    right: 60px;
-    top: 210px;
 }
 
 @media screen and (max-width: 768px){
