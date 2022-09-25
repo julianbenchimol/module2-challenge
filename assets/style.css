@@ -112,16 +112,32 @@ h2{
 }
 
 .overlay:hover {
-    outline: 3px solid var(--highlightColor);
+    outline: 5px solid var(--highlightColor);
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px){
-    .picture-holder{
-        flex-direction: row;
-    }
-    #study-guide, #contact-form, #code-snippet {
-        margin: 5px;
-        width: 45%;
-    }
+#card-header{
+    padding-top: 10px;
+}
+.bottom-navbar{
+    width: 1300px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: var(--navbarColor);
+    width: 100%;
+}
+
+.bottom-navbar a {
+    color: var(--textColor);
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.bottom-navbar a:hover{
+    background-color: var(--highlightColor);
+}
+footer {
+    background-color: var(--headerColor);
+    height: 100px;
 }
